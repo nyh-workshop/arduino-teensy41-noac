@@ -9,7 +9,7 @@ This works by connecting all the address lines, data lines and control lines to 
 ![schematic](schematic.png)
 
 Usage:
-1. Use the "romdumper" as provided in the folder. Assemble the dumper according to the schematic in that folder and run the Python app in the Raspberry Pi.
+1. Use the "romdumper" or "arduino-rp2040-romdumper" as provided in the folder. Assemble the dumper according to the schematic in that folder and run the Python app.
 2. Using a hex editor such as HxD, extract out the 0x60000-0x80000 and put these into the another new binary file.
 3. Connect the Teensy 4.1 to the handheld PCB with a 1.27mm pitch ribbon cable and some IDC connectors. The other end of the ribbon cable (not shown here) is connected to the female IDC connector (more than 22 pins). The white cable that is soldered to the Reset button on the PCB is the RST at the schematic. Here is an picture to explain how it is connected:
 ![teensy41_to_handheld](teensy41_to_handheld.png)
@@ -27,3 +27,4 @@ Usage:
 ## References:
 * Flash emulator is loosely based on [this code](https://github.com/gfoot/picoprom/tree/main).
 * Ymodem from [Loboris' github](https://github.com/loboris/ESP32_ymodem_example).
+* ROM dumping methods are loosely based on Aleksandr Serdyukov's [SUP Console flash programmator](https://github.com/Promolife/sup_console_programmator).
